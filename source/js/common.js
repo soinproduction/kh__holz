@@ -1,10 +1,10 @@
 $(function () {
-  $('.baner__slider').slick({
+  $('.main-slider__box').slick({
     accessibility: true,
     arrows: false,
     dots: true,
     speed: 1500,
-    dotsClass: "baner__slider-dots",
+    dotsClass: "main-slider__dots",
     // responsive: [
     //   {
     //     breakpoint: 1480,
@@ -54,14 +54,13 @@ $(function () {
     // ]
   });
 
-  $('.position__slider').slick({
+  $('.second-slider').slick({
     accessibility: true,
-    prevArrow: '<button class="slick__slider-left slick__slider__btn"></button>',
-    nextArrow: '<button class="slick__slider-right slick__slider__btn"></button>',
     dots: false,
     infinite: true,
-    dotsClass: "baner__slider-dots",
-    mobileFirst: true,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    dotsClass: "second-slider__dots",
     responsive: [
       {
         breakpoint: 1480,
@@ -171,7 +170,7 @@ $(function () {
   //   $('.product-item__favorite').on("click", function(){
   //     $('.product-item__favorite').toggleClass("product-item__favorite-active");
   // });
-    
+
     $('.product-item__favorite').click(function () {
       $(this).toggleClass('product-item__favorite-active')
     });
