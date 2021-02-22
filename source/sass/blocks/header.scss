@@ -1,11 +1,15 @@
-header {
-  padding: 33px 0 39px;
+.index-header {
+
+  &--dark {
+    background-color: #000;
+  }
 }
 
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 33px 0 30px;
 }
 
 .nav__list {

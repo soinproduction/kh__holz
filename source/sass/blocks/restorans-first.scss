@@ -1,0 +1,70 @@
+.lion-center {
+  background-image: url(../img/lion-bg.svg);
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: 21px;
+}
+
+.restorans-first {
+  padding-bottom: 140px;
+}
+
+.restorans {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.restorans__item {
+  width: 28%;
+  &:hover {
+    .restorans__img {
+      box-shadow: 0px 5px 16px 20px #111;
+      transform: scale(1.05);
+    }
+  }
+}
+
+.restorans__img {
+  width: 100%;
+  margin-bottom: 24px;
+  transition: all .4s;
+}
+
+.restorans__info {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  display: flex;
+  align-items:flex-end;
+  margin-bottom: 10px;
+  svg {
+    margin-right: 16px;
+  }
+}
+
+.restorans__title {
+  font-family: Georgia;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 22px;
+  line-height: 25px;
+  color: #FED105;
+  margin-bottom: 15px;
+}
+
+.restorans__descr {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.04em;
+  color: rgba(128, 130, 133, 0.57);
+  margin-bottom: 50px;
+}
+
