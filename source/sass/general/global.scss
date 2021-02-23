@@ -37,6 +37,11 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: all .4s;
+  &:hover {
+    transition: all .4s;
+    transform: scale(1.05);
+  }
 }
 
 ul,

@@ -3,6 +3,9 @@
   background-repeat: no-repeat;
   background-position-x: center;
   background-position-y: 21px;
+  &--right {
+    background-position-x: right;
+  }
 }
 
 .restorans-first {

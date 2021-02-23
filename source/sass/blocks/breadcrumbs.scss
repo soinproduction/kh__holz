@@ -1,5 +1,9 @@
 .breadcrumbs {
   padding: 60px 0 80px;
+  &--bg{
+    padding-top: 250px;
+    padding-bottom: 100px;
+  }
 }
 
 .breadcrumbs-box {
@@ -54,55 +58,4 @@
   color: #FFFFFF;
 }
 
-.restorans {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-}
-
-.restorans__item {
-  width: 28%;
-}
-
-.restorans__img {
-  width: 100% ;
-  margin-bottom: 24px;
-}
-
-.restorans__info {
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 12px;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  color: #FFFFFF;
-  display: flex;
-  align-items:flex-end;
-  margin-bottom: 10px;
-  svg {
-    margin-right: 16px;
-  }
-}
-
-.restorans__title {
-  font-family: Georgia;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 22px;
-  line-height: 25px;
-  color: #FED105;
-  margin-bottom: 15px;
-}
-
-.restorans__descr {
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 16px;
-  letter-spacing: 0.04em;
-  color: rgba(128, 130, 133, 0.57);
-  margin-bottom: 50px;
-}
 

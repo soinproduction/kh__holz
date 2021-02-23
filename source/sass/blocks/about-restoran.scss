@@ -1,0 +1,50 @@
+.about-restoran-top {
+  background-image: url("../img/about__restoran-top.png");
+  background-position: 0 0;
+  background-size: cover;
+}
+
+.about-top {
+  margin-top: 28px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.about-top__item {
+  &:first-child {
+    width: 40% ;
+  }
+  &:last-child {
+    display: flex;
+    justify-content: space-between;
+    width: 37%;
+  }
+}
+
+.about-btn {
+  padding: 15px 32px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 15px;
+  line-height: 18px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  background: rgba(0, 0, 0, 0.1);
+  border: 1px solid #FFFFFF;
+  border-radius: 10px;
+}
+
+.about-top__descr {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
+  color: #FFFFFF;
+  opacity: 0.8;
+}
