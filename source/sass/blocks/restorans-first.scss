@@ -1,3 +1,7 @@
+.tabs-section {
+  padding-bottom: 100px;
+}
+
 .lion-center {
   background-image: url(../img/lion-bg.svg);
   background-repeat: no-repeat;
@@ -70,4 +74,167 @@
   color: rgba(128, 130, 133, 0.57);
   margin-bottom: 50px;
 }
+
+.restotan-nav {
+  display: flex;
+  margin-bottom: 60px;
+}
+
+.restotan-nav__link {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: #808285;
+  opacity: 0.5;
+  padding-bottom: 11px;
+  transition: all .4s;
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
+.restotan-nav__link + .restotan-nav__link {
+  margin-left: 80px;
+}
+
+.restotan-nav__link--active {
+  color: #FED105;
+  opacity: 1;
+  border-bottom: 2px solid #FED105;
+  &:hover {
+    transform: none;
+  }
+}
+
+.tab-about {
+  margin-bottom: 60px;
+}
+
+.tab-about__text {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 24px;
+  color: #FFFFFF;
+  width: 55%;
+  margin-bottom: 30px;
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+}
+
+
+
+
+
+
+.custom-slider {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.main-slider2 {
+  max-width: 800px;
+}
+
+.main-slider2__slide {
+  outline: none;
+  position: relative;
+}
+
+.secondary-slider {
+  max-width: 650px;
+  filter: brightness(25%);
+  margin-right: -100px;
+}
+
+.secondary-slider__slide {
+  outline: none;
+
+}
+
+.secondary-slider__img {
+
+}
+
+.container-slider {
+  width: 1500px;
+  margin-left: auto;
+}
+
+.slick__slider__btn {
+  position: absolute;
+  z-index: 20;
+  bottom: 0;
+  background-color: transparent;
+  transform: translateY(50%);
+  bottom: 50%;
+  cursor: pointer;
+  filter: brightness(25%);
+  transition: all .2s;
+  &:hover,:focus {
+    filter: brightness(100);
+    transition: all .2s;
+  }
+}
+
+
+.slick__slider-right {
+  right: -90px;
+}
+
+.slick__slider-left {
+  left: -90px;
+}
+
+.open-image {
+  position: absolute;
+  z-index: 100;
+  top: 0;
+  right: 0;
+  outline: none;
+  cursor: pointer;
+  transition: all .4s;
+  &:hover {
+    transform: scale(1.1);
+    svg path {
+      stroke: #FED105;
+    }
+  }
+}
+
+.fancybox-image {
+  width: 150%;
+  height: 150%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.count-wrapper  {
+  position: relative;
+  // padding-bottom: 40px;
+}
+
+.count {
+  position: absolute;
+  right: 0;
+  bottom: -40px;
+  font-family: Georgia;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 22px;
+  line-height: 31px;
+  color: #8E898F;
+  word-spacing: 500px;
+  &:first-letter {
+    color: #fff;
+  }
+}
+
 

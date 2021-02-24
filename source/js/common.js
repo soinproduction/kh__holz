@@ -54,6 +54,36 @@ $(function () {
     // ]
   });
 
+
+  $(".main-slider2").on("init", function(event, slick){
+    $(".count").text(parseInt(slick.currentSlide + 1) + '/' + slick.slideCount);
+  });
+
+  $(".main-slider2").on("afterChange", function(event, slick, currentSlide){
+      $(".count").text(parseInt(slick.currentSlide + 1) + '/' + slick.slideCount);
+  });
+
+
+  $('.main-slider2').slick({
+    accessibility: true,
+    arrows: true,
+    dots: false,
+    speed: 1500,
+    asNavFor: '.secondary-slider',
+    prevArrow: '<div class="slick__slider-left slick__slider__btn"><img src="../img/left-arrow.svg" alt="Слайд"></div>',
+    nextArrow: '<div class="slick__slider-right slick__slider__btn"><img src="../img/right-arrows.svg" alt="Слайд"></div>',
+  });
+
+  $('.secondary-slider').slick({
+    accessibility: true,
+    arrows: false,
+    dots: false,
+    speed: 1500,
+    slidesToShow:1.5,
+    asNavFor: '.main-slider2',
+  });
+
+
   $('.second-slider').slick({
     accessibility: true,
     dots: false,
@@ -189,6 +219,12 @@ $(function () {
         }
       });
     }
+
+    $(document).ready(function() {
+      $(".open-image").fancybox();
+    });
+
+
 
 
     $('.tab').on('click', function (e) {
