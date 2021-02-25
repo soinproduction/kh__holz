@@ -69,6 +69,7 @@ $(function () {
     arrows: true,
     dots: false,
     speed: 1500,
+    autoPlay:true,
     asNavFor: '.secondary-slider',
     prevArrow: '<div class="slick__slider-left slick__slider__btn"><img src="../img/left-arrow.svg" alt="Слайд"></div>',
     nextArrow: '<div class="slick__slider-right slick__slider__btn"><img src="../img/right-arrows.svg" alt="Слайд"></div>',
@@ -79,7 +80,7 @@ $(function () {
     arrows: false,
     dots: false,
     speed: 1500,
-    slidesToShow:1.5,
+    slidesToShow:1,
     asNavFor: '.main-slider2',
   });
 
@@ -227,16 +228,25 @@ $(function () {
 
 
 
-    $('.tab').on('click', function (e) {
+    $('.tab').on('click', function(e){
       e.preventDefault();
-
-      $($(this).siblings()).removeClass('tab_active');
-      $($(this).closest('.tabs-wrapper').siblings().find('div')).removeClass('tabs-content_active');
+      $('.tab').removeClass('tab_active');
+      $('.tab-section').removeClass('tabs-content--active');
 
       $(this).addClass('tab_active');
-      $($(this).attr('href')).addClass('tabs-content_active');
-    });
+      $($(this).attr('href')).addClass('tabs-content--active');
 
+      $('.main-slider2').slick();
+      $('.secondary-slider').slick();
+
+      $(".main-slider2").on("init", function(event, slick){
+        $(".count").text(parseInt(slick.currentSlide + 1) + '/' + slick.slideCount);
+      });
+
+      $(".main-slider2").on("afterChange", function(event, slick, currentSlide){
+          $(".count").text(parseInt(slick.currentSlide + 1) + '/' + slick.slideCount);
+      });
+  });
 
 
 
