@@ -39,7 +39,7 @@ button {
   justify-content: center;
   transition: all .4s;
   &:hover {
-    transition: all .4s;
+    transition: transform .4s;
     transform: scale(1.05);
   }
 }

@@ -177,9 +177,8 @@ $(function () {
       $('.tab-section').removeClass('tabs-content--active');
       $('.tab').removeClass('tab_active');
 
-
-      $(this).addClass('tab_active');
       $($(this).attr('href')).addClass('tabs-content--active');
+      $(this).addClass('tab_active');
   });
 
 
