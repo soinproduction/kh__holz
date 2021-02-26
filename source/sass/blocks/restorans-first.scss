@@ -280,12 +280,13 @@
 }
 
 .tab-section {
-  padding-top: 60px;
-  display: none;
+  visibility: hidden;
+  height: 0;
 }
 
 .tabs-content--active {
-  display: block;
+  height: auto;
+  visibility: visible;
 }
 
 

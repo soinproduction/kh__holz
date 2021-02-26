@@ -5,63 +5,18 @@ $(function () {
     dots: true,
     speed: 1500,
     dotsClass: "main-slider__dots",
-    // responsive: [
-    //   {
-    //     breakpoint: 1480,
-    //     settings: {
-    //       slidesToShow: 1,
-    //       slidesToScroll: 1,
-    //       infinite: true,
-    //       centerMode: false,
-    //       dots: true
-    //     }
-    //   },
-    //   {
-    //     breakpoint: 1199,
-    //     settings: {
-    //       slidesToShow: 1,
-    //       slidesToScroll: 1
-    //     }
-    //   },
-    //   {
-    //     breakpoint: 991,
-    //     settings: {
-    //       slidesToShow: 1,
-    //       arrows: false,
-    //       slidesToScroll: 1
-    //     }
-    //   },
-    //   {
-    //     breakpoint: 767,
-    //     settings: {
-    //       slidesToShow: 1,
-    //       arrows: false,
-    //       slidesToScroll: 1
-    //     }
-    //   },
-    //   {
-    //     breakpoint: 575,
-    //     settings: {
-    //       slidesToShow: 1,
-    //       slidesToScroll: 1,
-    //       dots: true,
-    //       arrows: false,
-    //     }
-    //   }
-    //   // You can unslick at a given breakpoint now by adding:
-    //   // settings: "unslick"
-    //   // instead of a settings object
-    // ]
   });
 
 
-  $(".main-slider2").on("init", function(event, slick){
-    $(".count").text(parseInt(slick.currentSlide + 1) + '/' + slick.slideCount);
+  var $status = $('.count');
+  var $slickElement = $('.main-slider2');
+
+  $slickElement.on('init reInit afterChange', function (event, slick, currentSlide, nextSlide) {
+      var i = (currentSlide ? currentSlide : 0) + 1;
+      $status.text(i + '/' + slick.slideCount);
   });
 
-  $(".main-slider2").on("afterChange", function(event, slick, currentSlide){
-      $(".count").text(parseInt(slick.currentSlide + 1) + '/' + slick.slideCount);
-  });
+
 
 
   $('.main-slider2').slick({
@@ -135,9 +90,6 @@ $(function () {
           arrows: false,
         }
       }
-      // You can unslick at a given breakpoint now by adding:
-      // settings: "unslick"
-      // instead of a settings object
     ]
   });
 
@@ -192,16 +144,8 @@ $(function () {
           arrows: false,
         }
       }
-      // You can unslick at a given breakpoint now by adding:
-      // settings: "unslick"
-      // instead of a settings object
     ]
   });
-
-  //   $('.product-item__favorite').on("click", function(){
-  //     $('.product-item__favorite').toggleClass("product-item__favorite-active");
-  // });
-
     $('.product-item__favorite').click(function () {
       $(this).toggleClass('product-item__favorite-active')
     });
@@ -230,22 +174,12 @@ $(function () {
 
     $('.tab').on('click', function(e){
       e.preventDefault();
-      $('.tab').removeClass('tab_active');
       $('.tab-section').removeClass('tabs-content--active');
+      $('.tab').removeClass('tab_active');
+
 
       $(this).addClass('tab_active');
       $($(this).attr('href')).addClass('tabs-content--active');
-
-      $('.main-slider2').slick();
-      $('.secondary-slider').slick();
-
-      $(".main-slider2").on("init", function(event, slick){
-        $(".count").text(parseInt(slick.currentSlide + 1) + '/' + slick.slideCount);
-      });
-
-      $(".main-slider2").on("afterChange", function(event, slick, currentSlide){
-          $(".count").text(parseInt(slick.currentSlide + 1) + '/' + slick.slideCount);
-      });
   });
 
 
