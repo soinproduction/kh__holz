@@ -29,6 +29,16 @@
   margin-bottom: 15px;
   position: relative;
   z-index: 1;
+  &::before {
+    position: absolute;
+    width: 40%;
+    content: "";
+    height: 2px;
+    background-color: #fff;
+    right: 0;
+    top: 50%;
+    transform: translateY(50%);
+  }
 }
 
 .main-slide__brew {

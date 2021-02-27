@@ -127,6 +127,11 @@ input[type=number] {
   background-image: url(../img/index-bg_top.svg),url(../img/index-bg_bottom.svg);
   background-position: top left , bottom right;
   background-repeat: no-repeat , no-repeat;
+  &--delivery {
+    background-image: url(../img/index-bg_bottom.svg);
+    background-position: bottom right;
+    background-repeat: no-repeat;
+  }
 }
 
 

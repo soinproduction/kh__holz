@@ -1,7 +1,5 @@
 .brewery-sec {
   background-color: #141414;
-  padding: 0px 120px;
-
 }
 
 .brewery-first__item {
@@ -119,3 +117,46 @@
   line-height: 120%;
   color: #FFFFFF;
 }
+
+.about-title {
+  width: 100%;
+  position: relative;
+  .main-slide__brew {
+    top: -40px;
+  }
+}
+
+.about-first {
+  .brewery-first__item {
+    padding: 0;
+    &:first-child {
+      width: 42%;
+    }
+  }
+}
+
+.about-first__item {
+  position: relative;
+  width: 45%;
+}
+
+.about-first__img {
+  position: absolute;
+  top: 40px;
+  left: 0;
+  z-index: 5;
+}
+
+.about-first__img2 {
+  position: absolute;
+  bottom: 0;
+  right: 25px;
+  z-index: 100;
+}
+
+.about-us-second {
+  min-height: 0;
+  margin-top: 100px;
+  margin-bottom: 150px;
+}
+

@@ -7,6 +7,16 @@
     dotsClass: "main-slider__dots",
   });
 
+  $('.delivery-slider').slick({
+    accessibility: true,
+    arrows: true,
+    dots: true,
+    speed: 1500,
+    dotsClass: "delivery-slider__dots",
+    prevArrow: '<div class="delivery-slider-left delivery-slider__button"><img src="../img/chevron-left.svg" alt="Слайд"></div>',
+    nextArrow: '<div class="delivery-slider-right delivery-slider__button"><img src="../img/chevron-right.svg" alt="Слайд"></div>',
+  });
+
 
   var $status = $('.count');
   var $slickElement = $('.main-slider2');
