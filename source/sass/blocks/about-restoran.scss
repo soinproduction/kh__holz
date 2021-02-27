@@ -1,9 +1,17 @@
 .about-restoran-top {
   background-image: url("../img/about__restoran-top.png");
   background-position: 0 0;
-  background-size: cover;
+  background-size: contain;
+  background-repeat: no-repeat;
   &--bear {
     background-image: url("../img/our-bear-top.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+  &--brewery {
+    background-image: url("../img/brewery-bg.png");
+    background-size: contain;
+    background-repeat: no-repeat;
   }
 }
 
