@@ -2,6 +2,9 @@
   background-image: url("../img/about__restoran-top.png");
   background-position: 0 0;
   background-size: cover;
+  &--bear {
+    background-image: url("../img/our-bear-top.png");
+  }
 }
 
 .about-top {
@@ -9,10 +12,11 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 60px;
 }
 
 .about-top__item {
-  margin-bottom: 90px;
+
   &:first-child {
     width: 40% ;
   }

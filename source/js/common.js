@@ -1,4 +1,4 @@
-$(function () {
+
   $('.main-slider__box').slick({
     accessibility: true,
     arrows: false,
@@ -146,44 +146,63 @@ $(function () {
       }
     ]
   });
-    $('.product-item__favorite').click(function () {
-      $(this).toggleClass('product-item__favorite-active')
+
+  $('.product-item__favorite').click(function () {
+    $(this).toggleClass('product-item__favorite-active')
+  });
+
+  var acc = document.getElementsByClassName("accordion");
+  var i;
+
+  for (i = 0; i < acc.length; i++) {
+    acc[i].addEventListener("click", function () {
+      this.classList.toggle("accordion__active");
+      var panel = this.nextElementSibling;
+      if (panel.style.maxHeight) {
+        panel.style.maxHeight = null;
+      } else {
+        panel.style.maxHeight = panel.scrollHeight + "px";
+      }
     });
+  };
 
-    var acc = document.getElementsByClassName("search");
-    var i;
-
-    for (i = 0; i < acc.length; i++) {
-      acc[i].addEventListener("click", function () {
-        this.classList.toggle("search__active");
-        var panel = this.nextElementSibling;
-        if (panel.style.maxHeight) {
-          panel.style.maxHeight = null;
-        } else {
-          panel.style.maxHeight = panel.scrollHeight + "px";
-        }
-      });
-    }
-
-    $(document).ready(function() {
-      $(".open-image").fancybox();
-    });
-
-
-
-
-    $('.tab').on('click', function(e){
-      e.preventDefault();
-      $('.tab-section').removeClass('tabs-content--active');
-      $('.tab').removeClass('tab_active');
-
-      $($(this).attr('href')).addClass('tabs-content--active');
-      $(this).addClass('tab_active');
+  $(document).ready(function() {
+    $(".open-image").fancybox();
   });
 
 
 
 
+  $('.tab').on('click', function(e){
+    e.preventDefault();
+    $('.tab-section').removeClass('tabs-content--active');
+    $('.tab').removeClass('tab_active');
+
+    $($(this).attr('href')).addClass('tabs-content--active');
+    $(this).addClass('tab_active');
+  });
 
 
-});
+  // переменная не переназначается, поэтому используем const
+  // используем querySelectorAll, чтобы собрать массив со всеми сущностями .select
+  const select = document.querySelectorAll('.select');
+
+  // если массив не пустой, пробегаемся в цикле по каждой найденой сущности
+  if (select.length) {
+    select.forEach(item => {
+      // достаем из текущей сущности .select__current
+      const selectCurrent = item.querySelector('.select__current');
+
+      item.addEventListener('click', event => {
+        const el = event.target.dataset.choice;
+        const text = event.target.innerText;
+
+        // Проверяем является ли это choosen и не выбрано ли его значение уже
+        if (el === 'choosen' && selectCurrent.innerText !== text) {
+          selectCurrent.innerText = text;
+        }
+
+        item.classList.toggle('is-active');
+      });
+    });
+  }
