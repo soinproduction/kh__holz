@@ -130,14 +130,14 @@
   .brewery-first__item {
     padding: 0;
     &:first-child {
-      width: 42%;
+      width: 47%;
     }
   }
 }
 
 .about-first__item {
   position: relative;
-  width: 45%;
+  width: 47%;
 }
 
 .about-first__img {
@@ -150,7 +150,7 @@
 .about-first__img2 {
   position: absolute;
   bottom: 0;
-  right: 25px;
+  right: 0;
   z-index: 100;
 }
 

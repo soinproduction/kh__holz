@@ -216,3 +216,27 @@
       });
     });
   }
+
+
+
+  $('.block-count__plus').click(function () {
+    var max_qty = Number($(this).parent().find('.block-count__input').attr('max'));
+    var qty = Number($(this).parent().find('.block-count__input').val());
+    if (qty > max_qty) {
+      qty = max_qty;
+    } else if (qty == max_qty) {
+      qty = max_qty;
+    } else {
+      qty += 1;
+    }
+    $(this).parent().find('.block-count__input').val(qty);
+  });
+
+
+
+  $('.block-count__minus').click(function () {
+    if ($(this).parent().find('.block-count__input').val() > 1) {
+      var plus = Number($(this).parent().find('.block-count__input').val()) - 1;
+      $(this).parent().find('.block-count__input').val(plus);
+    }
+  });
