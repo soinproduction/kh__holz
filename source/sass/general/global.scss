@@ -111,6 +111,9 @@ input[type=number] {
   padding: 0 5px;
   width: 100%;
   margin: 0 auto;
+  &--mode {
+    max-width: 1400px;
+  }
 }
 
 .main-container {

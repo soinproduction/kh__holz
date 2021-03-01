@@ -56,7 +56,7 @@
     infinite: true,
     slidesToShow: 4,
     slidesToScroll: 1,
-    dotsClass: "second-slider__dots",
+    dotsClass: "main-slider__dots main-slider__dots--second",
     responsive: [
       {
         breakpoint: 1480,
@@ -98,6 +98,8 @@
           slidesToScroll: 1,
           dots: true,
           arrows: false,
+          centerMode: true,
+          centerPadding: '0px',
         }
       }
     ]
