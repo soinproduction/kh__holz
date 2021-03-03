@@ -53,42 +53,36 @@
   $('.second-slider').slick({
     accessibility: true,
     dots: false,
-    infinite: true,
+    infinite: false,
     slidesToShow: 4,
     slidesToScroll: 1,
     dotsClass: "main-slider__dots main-slider__dots--second",
     responsive: [
       {
-        breakpoint: 1480,
-        settings: {
-          slidesToShow: 5,
-          slidesToScroll: 1,
-          infinite: true,
-          centerMode: false,
-          dots: false
-        }
-      },
-      {
         breakpoint: 1199,
         settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1
+          slidesToShow: 4,
+          slidesToScroll: 1,
+          arrows: false,
+          dots: false,
         }
       },
       {
-        breakpoint: 991,
+        breakpoint: 992,
         settings: {
-          slidesToShow: 1,
+          slidesToShow: 3,
           arrows: false,
+          dots: true,
           slidesToScroll: 1
         }
       },
       {
         breakpoint: 767,
         settings: {
-          slidesToShow: 1,
+          slidesToShow: 2,
           arrows: false,
-          slidesToScroll: 1
+          slidesToScroll: 1,
+          dots: true,
         }
       },
       {
