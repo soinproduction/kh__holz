@@ -15,6 +15,46 @@
     dotsClass: "delivery-slider__dots",
     prevArrow: '<div class="delivery-slider-left delivery-slider__button"><img src="../img/chevron-left.svg" alt="Слайд"></div>',
     nextArrow: '<div class="delivery-slider-right delivery-slider__button"><img src="../img/chevron-right.svg" alt="Слайд"></div>',
+    responsive: [
+      {
+        breakpoint: 1199,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          arrows: true,
+          dots: false,
+        }
+      },
+      {
+        breakpoint: 992,
+        settings: {
+          slidesToShow: 1,
+          arrows: false,
+          dots: true,
+          slidesToScroll: 1
+        }
+      },
+      {
+        breakpoint: 767,
+        settings: {
+          slidesToShow: 1,
+          arrows: false,
+          slidesToScroll: 1,
+          dots: true,
+        }
+      },
+      {
+        breakpoint: 575,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          dots: true,
+          arrows: false,
+          centerMode: true,
+          centerPadding: '0px',
+        }
+      }
+    ]
   });
 
 
@@ -33,11 +73,80 @@
     accessibility: true,
     arrows: true,
     dots: false,
+    slidesToShow: 1,
+    slidesToScroll: 1,
     speed: 1500,
-    autoPlay:true,
-    asNavFor: '.secondary-slider',
     prevArrow: '<div class="slick__slider-left slick__slider__btn"><img src="../img/left-arrow.svg" alt="Слайд"></div>',
     nextArrow: '<div class="slick__slider-right slick__slider__btn"><img src="../img/right-arrows.svg" alt="Слайд"></div>',
+    responsive: [
+      {
+        breakpoint: 18000,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          arrows: true,
+          dots: false,
+          asNavFor: '.secondary-slider',
+        }
+      },
+      {
+        breakpoint: 1600,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          arrows: true,
+          dots: false,
+          asNavFor: '.secondary-slider',
+        }
+      },
+      {
+        breakpoint: 1479,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          arrows: false,
+          arrows: true,
+          dots: false,
+          asNavFor: '.secondary-slider',
+        }
+      },
+      {
+        breakpoint: 1199,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          arrows: true,
+          dots: false,
+          asNavFor: '.secondary-slider',
+        }
+      },
+      {
+        breakpoint: 992,
+        settings: {
+          slidesToShow: 1,
+          arrows: false,
+          dots: false,
+          slidesToScroll: 1
+        }
+      },
+      {
+        breakpoint: 767,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          arrows: false,
+        }
+      },
+      {
+        breakpoint: 576,
+        settings: {
+          arrows: false,
+          dots: false,
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        }
+      },
+    ]
   });
 
   $('.secondary-slider').slick({
