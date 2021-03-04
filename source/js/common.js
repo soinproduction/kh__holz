@@ -57,7 +57,6 @@
     ]
   });
 
-
   var $status = $('.count');
   var $slickElement = $('.main-slider2');
 
@@ -67,14 +66,15 @@
   });
 
 
-
-
   $('.main-slider2').slick({
     accessibility: true,
     arrows: true,
     dots: false,
     slidesToShow: 1,
     slidesToScroll: 1,
+    autoplay:true,
+    pauseOnHover:true,
+    pauseOnFocus:true,
     speed: 1500,
     prevArrow: '<div class="slick__slider-left slick__slider__btn"><img src="../img/left-arrow.svg" alt="Слайд"></div>',
     nextArrow: '<div class="slick__slider-right slick__slider__btn"><img src="../img/right-arrows.svg" alt="Слайд"></div>',
@@ -154,8 +154,12 @@
     arrows: false,
     dots: false,
     speed: 1500,
-    slidesToShow:1,
+    slidesToShow:2,
     asNavFor: '.main-slider2',
+    variableWidth: true,
+    draggable:false,
+    focusOnSelect:false,
+    swipeToSlide:false,
   });
 
 
@@ -168,21 +172,28 @@
     dotsClass: "main-slider__dots main-slider__dots--second",
     responsive: [
       {
+        breakpoint: 1480,
+        settings: {
+          slidesToShow: 4,
+          variableWidth:false,
+          centerMode:true,
+        }
+      },
+      {
         breakpoint: 1199,
         settings: {
           slidesToShow: 4,
-          slidesToScroll: 1,
-          arrows: false,
-          dots: false,
+          variableWidth:false,
         }
       },
       {
         breakpoint: 992,
         settings: {
-          slidesToShow: 3,
+          slidesToShow: 2,
           arrows: false,
           dots: true,
-          slidesToScroll: 1
+          slidesToScroll: 2,
+          variableWidth:true,
         }
       },
       {
@@ -192,6 +203,7 @@
           arrows: false,
           slidesToScroll: 1,
           dots: true,
+          variableWidth:true,
         }
       },
       {
@@ -201,62 +213,9 @@
           slidesToScroll: 1,
           dots: true,
           arrows: false,
+          variableWidth:true,
           centerMode: true,
           centerPadding: '0px',
-        }
-      }
-    ]
-  });
-
-  $('.top__brand-slider').slick({
-    accessibility: true,
-    prevArrow: '<button class="slick__slider-left slick__slider__btn"></button>',
-    nextArrow: '<button class="slick__slider-right slick__slider__btn"></button>',
-    dots: false,
-    infinite: true,
-    dotsClass: "baner__slider-dots",
-    mobileFirst: true,
-    responsive: [
-      {
-        breakpoint: 1480,
-        settings: {
-          slidesToShow: 11,
-          slidesToScroll: 1,
-          infinite: true,
-          centerMode: false,
-          dots: false
-        }
-      },
-      {
-        breakpoint: 1199,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1
-        }
-      },
-      {
-        breakpoint: 991,
-        settings: {
-          slidesToShow: 1,
-          arrows: false,
-          slidesToScroll: 1
-        }
-      },
-      {
-        breakpoint: 767,
-        settings: {
-          slidesToShow: 1,
-          arrows: false,
-          slidesToScroll: 1
-        }
-      },
-      {
-        breakpoint: 575,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          dots: true,
-          arrows: false,
         }
       }
     ]
@@ -284,9 +243,6 @@
   $(document).ready(function() {
     $(".open-image").fancybox();
   });
-
-
-
 
   $('.tab').on('click', function(e){
     e.preventDefault();
@@ -322,8 +278,6 @@
     });
   }
 
-
-
   $('.block-count__plus').click(function () {
     var max_qty = Number($(this).parent().find('.block-count__input').attr('max'));
     var qty = Number($(this).parent().find('.block-count__input').val());
@@ -337,11 +291,19 @@
     $(this).parent().find('.block-count__input').val(qty);
   });
 
-
-
   $('.block-count__minus').click(function () {
     if ($(this).parent().find('.block-count__input').val() > 1) {
       var plus = Number($(this).parent().find('.block-count__input').val()) - 1;
       $(this).parent().find('.block-count__input').val(plus);
     }
+  });
+
+  $(".hamburger").click(function(event) {
+    $(".hamburger").toggleClass('hamburger__active'),
+    $(".mobile__menu ").toggleClass('mobile__menu__active');
+  });
+
+  $(".hamburger-lk").click(function(event) {
+    $(".hamburger-lk").toggleClass('hamburger-lk--active'),
+    $(".lk-box__left").toggleClass('lk-box__left--active');
   });

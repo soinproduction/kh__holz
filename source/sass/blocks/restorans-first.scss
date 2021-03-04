@@ -183,6 +183,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
 }
 
 .count-wrapper {
@@ -196,18 +197,24 @@
 }
 
 .secondary-slider {
-  max-width: 650px;
+  max-width: 750px;
   filter: brightness(25%);
-  margin-right: -100px;
+  height: 200px;
+  position: absolute;
+  right: -305px;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .secondary-slider__slide {
   outline: none;
-
+  margin-right: 39px;
+  width: 400px;
+  height: 200px;
 }
 
 .secondary-slider__img {
-
+  height: auto;
 }
 
 .container-slider {

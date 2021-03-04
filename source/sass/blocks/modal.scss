@@ -5,13 +5,16 @@
   background-color: rgba(0,0,0, .56);
   top: 0;
   z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .modal {
-  position: absolute;
-  top: 45%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  position: relative;
+  // top: 45%;
+  // left: 50%;
+  // transform: translate(-50%, -50%);
   width: 656px;
   min-height: 440px;
   background: #FFFFFF;
