@@ -43,7 +43,7 @@
 }
 
 .brewery-second__title {
-  width: 70%;
+  // width: 70%;
   font-family: Roboto;
   font-style: normal;
   font-weight: bold;
@@ -65,7 +65,7 @@
 .brewery-second {
   display: flex;
   justify-content: space-around;
-  min-height: 694px;
+  min-height: 730px;
   height: 100%;
 }
 
@@ -160,3 +160,6 @@
   margin-bottom: 150px;
 }
 
+.about-top--brewery {
+  margin-bottom: 0;
+}

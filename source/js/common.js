@@ -13,8 +13,8 @@
     dots: true,
     speed: 1500,
     dotsClass: "delivery-slider__dots",
-    prevArrow: '<div class="delivery-slider-left delivery-slider__button"><img src="../img/chevron-left.svg" alt="Слайд"></div>',
-    nextArrow: '<div class="delivery-slider-right delivery-slider__button"><img src="../img/chevron-right.svg" alt="Слайд"></div>',
+    prevArrow: '<div class="delivery-slider-left delivery-slider__button"><img src="img/chevron-left.svg" alt="Слайд"></div>',
+    nextArrow: '<div class="delivery-slider-right delivery-slider__button"><img src="img/chevron-right.svg" alt="Слайд"></div>',
     responsive: [
       {
         breakpoint: 1199,
@@ -76,8 +76,8 @@
     pauseOnHover:true,
     pauseOnFocus:true,
     speed: 1500,
-    prevArrow: '<div class="slick__slider-left slick__slider__btn"><img src="../img/left-arrow.svg" alt="Слайд"></div>',
-    nextArrow: '<div class="slick__slider-right slick__slider__btn"><img src="../img/right-arrows.svg" alt="Слайд"></div>',
+    prevArrow: '<div class="slick__slider-left slick__slider__btn"><img src="img/left-arrow.svg" alt="Слайд"></div>',
+    nextArrow: '<div class="slick__slider-right slick__slider__btn"><img src="img/right-arrows.svg" alt="Слайд"></div>',
     responsive: [
       {
         breakpoint: 18000,
@@ -306,4 +306,9 @@
   $(".hamburger-lk").click(function(event) {
     $(".hamburger-lk").toggleClass('hamburger-lk--active'),
     $(".lk-box__left").toggleClass('lk-box__left--active');
+  });
+
+  $(".checkout-row__tare").click(function(event) {
+    $(".checkout-row__tare").toggleClass('checkout-row__tare--active'),
+    $(".tare-block").toggleClass('tare-block--active');
   });

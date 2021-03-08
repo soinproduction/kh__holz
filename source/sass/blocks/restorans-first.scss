@@ -25,6 +25,11 @@
   &--center {
     background-position: center;
   }
+  &--brewery {
+    background-position-x: center;
+    background-position-y: 50%;
+    background-size: 43%;
+  }
 }
 
 .restorans-first {
@@ -295,11 +300,17 @@
 .tab-section {
   visibility: hidden;
   height: 0;
+  .roster {
+    display: none;
+  }
 }
 
 .tabs-content--active {
   height: auto;
   visibility: visible;
+  .roster {
+    display: flex;
+  }
 }
 
 
