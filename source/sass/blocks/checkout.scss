@@ -173,14 +173,14 @@
   font-size: 22px;
   line-height: 26px;
   color: #000000;
-  margin-bottom: 32px;
+  margin-bottom: 26px;
 }
 
 .checkout-widget__item {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 15px;
+  margin-bottom: 22px;
 }
 
 .checkout-widget__list {
@@ -447,12 +447,15 @@
   align-items: center;
   background-color: transparent;
   justify-content: center;
+  user-select: none;
+  cursor: pointer;
   svg {
     margin-right: 5px;
   }
   &--active {
     border: 2px solid #FED105;
     pointer-events: none;
+    cursor: pointer;
   }
 }
 
@@ -489,4 +492,11 @@
   line-height: 26px;
   color: #FFFFFF;
   margin-right: 15px;
+}
+
+.tare-block {
+  display: none;
+  &--active {
+    display: flex;
+  }
 }

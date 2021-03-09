@@ -120,6 +120,10 @@
   color: #FFFFFF;
 }
 
+.modal__age--mode {
+  width: 165px;
+}
+
 .modal__no {
   background-color: #fff;
   border: 1px solid #231F20;
@@ -412,7 +416,7 @@
 .modal-select {
   width: 100%;
   .select__current {
-    font-weight: 500;
+    font-weight: 400;
   }
 }
 
@@ -512,4 +516,12 @@
 
 .modal-about__personal {
   text-decoration: underline;
+}
+
+.wrust-modal__item {
+  .delivery-mobile {
+    display: none;
+    cursor: pointer;
+  }
+
 }

@@ -41,6 +41,7 @@
   color: #000000;
   padding: 15px 32px;
   svg {
+    opacity: .4;
     margin-right: 15px;
   }
 }
@@ -241,7 +242,7 @@
 }
 
 .index-menu__item:hover {
-  cursor: url('../img/cursor.png');
+  cursor: url('../img/cursor.png'), auto;
   background-color: #fff;
   transition: all .4s;
   .menu-select__title {

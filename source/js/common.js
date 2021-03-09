@@ -215,7 +215,7 @@
           arrows: false,
           variableWidth:true,
           centerMode: true,
-          centerPadding: '0px',
+          centerPadding: '50px',
         }
       }
     ]
@@ -308,7 +308,8 @@
     $(".lk-box__left").toggleClass('lk-box__left--active');
   });
 
-  $(".checkout-row__tare").click(function(event) {
+  $(".checkout-row__coll--jq").click(function(event) {
     $(".checkout-row__tare").toggleClass('checkout-row__tare--active'),
     $(".tare-block").toggleClass('tare-block--active');
   });
+

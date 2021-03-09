@@ -300,7 +300,7 @@
 .tab-section {
   visibility: hidden;
   height: 0;
-  .roster {
+  .roster,.restorans {
     display: none;
   }
 }
@@ -308,7 +308,7 @@
 .tabs-content--active {
   height: auto;
   visibility: visible;
-  .roster {
+  .roster,.restorans {
     display: flex;
   }
 }

@@ -57,7 +57,7 @@
 
 .dropdown-list {
   padding: 30px 30px 0px 50px;
-  cursor: pointer;
+  cursor: url('../img/cursor.png'), auto;
   &:hover {
     background-color: #fff;
     .dropdown-list__title , .dropdown-list__descr {
