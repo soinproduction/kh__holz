@@ -169,6 +169,8 @@
     infinite: false,
     slidesToShow: 4,
     slidesToScroll: 1,
+    prevArrow: '<div class="delivery-slider-left delivery-slider__button"></div>',
+    nextArrow: '<div class="delivery-slider-right delivery-slider__button"><img src="img/second-slider-arrow.svg" alt="Слайд"></div>',
     dotsClass: "main-slider__dots main-slider__dots--second",
     responsive: [
       {
@@ -182,7 +184,8 @@
       {
         breakpoint: 1199,
         settings: {
-          slidesToShow: 4,
+          slidesToShow: 3,
+          arrows:true,
           variableWidth:false,
         }
       },
@@ -190,8 +193,8 @@
         breakpoint: 992,
         settings: {
           slidesToShow: 2,
-          arrows: false,
-          dots: true,
+          arrows: true,
+          dots: false,
           slidesToScroll: 2,
           variableWidth:true,
         }

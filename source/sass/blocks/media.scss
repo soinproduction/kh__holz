@@ -514,9 +514,9 @@
     left: 10px;
   }
 
-  .delivery-catalog {
-    justify-content: space-around;
-  }
+  // .delivery-catalog {
+  //   justify-content: space-around;
+  // }
 
   .delivery-info__item+.delivery-info__item {
     margin-left: 40px;
@@ -527,7 +527,13 @@
   }
 
   .delivery-info__link + .delivery-info__link {
-    margin-left: 10px;
+    margin-left: 0px;
+    margin-top: 5px;
+  }
+
+  .delivery-info__link  {
+    display:block;
+    margin: 0 auto;
   }
 
   .delivery-card {
@@ -714,6 +720,10 @@
       padding: 0 0px 20px ;
     }
 
+    .contacts-dropdown__title {
+      font-size: 32px;
+    }
+
     .contacts-dropdown__title::before {
       width: 100%;
     }
@@ -724,6 +734,9 @@
 
     .dropdown-list__item {
       margin-bottom: 15px;
+      &:last-child {
+        width: 45%;
+      }
     }
 
     .contacts-maps__img {
@@ -796,15 +809,29 @@
       position: initial;
     }
 
-
-    .checkout-box__item:last-child, .personal-box__item:last-child {
-      width: 29%;
+    .checkout-box,.personal-box {
+      flex-direction: column;
+      align-items: center;
     }
 
-    .checkout-box__item:first-child, .personal-box__item:first-child {
-      width: 69%;
+
+    .checkout-box__item:last-child , .personal-box__item:last-child{
+      max-width: 538px;
+      margin-top: 30px;
+      width: 100%;
     }
 
+    .checkout-widget {
+      max-width: 100%;
+    }
+
+    .checkout-box__item:first-child, .personal-box__item:first-child{
+      width: 100%;
+    }
+
+    .checkout-widget__btn {
+      margin: 0 auto;
+    }
 
     .kbb-catalog {
       justify-content: space-around;
@@ -818,6 +845,10 @@
     .select-kbb {
       margin-bottom: 0;
       width: auto;
+    }
+
+    .checkout-bottom__item:last-child {
+      width: 100%;
     }
 
     .kdd-order-row-value, .kdd-order-row-price {
@@ -1014,6 +1045,106 @@
 .mobile__menu-box {
   display: block;
 }
+
+
+.second-slider__wrapp {
+  .about-link svg {
+    margin-left: 5px;
+  }
+}
+
+.second-slider {
+  .delivery-slider-right {
+    right: 15px;
+    background: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(4px);
+    border: none;
+    width: 37px;
+    height: 37px;
+  }
+  .delivery-slider-left {
+   z-index: -100;
+   background-image: none;
+   background-color: transparent;
+   border: none;
+   font-size: 0;
+  }
+}
+
+
+.lk-box {
+  position: relative;
+}
+
+.hamburger-lk {
+  top: 45px;
+  width: 30px;
+  left: 15px;
+  z-index: 1000;
+  position: absolute;
+  display: block;
+  z-index: 10;
+}
+
+.hamburger-lk__wrapper {
+  position: absolute;
+  display: block;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 12px;
+  z-index: 1000;
+}
+
+.hamburger-lk__button span {
+  display: block;
+  height: 2px;
+  width: 100%;
+  background-color: rgb(0, 0, 0);
+  margin-bottom: 5px;
+  transition: all 0.5s;
+  border-radius: 3px;
+}
+
+
+.lk-left__title {
+  display: none;
+}
+
+.lk-left__link {
+  font-size: 0;
+}
+
+.lk-left__link svg {
+  margin: 0 20px;
+}
+
+.lk-box__left {
+  width: auto;
+  padding: 100px 0 45px;
+}
+
+
+.lk-left__link--active::before {
+  left: 0;
+}
+
+.lk-box__right {
+  width: 100%;
+}
+
+
+.lk-box__right {
+  padding-top: 40px;
+}
+
+.delivery-nav__item:nth-child(6),
+.delivery-nav__item:nth-child(7),
+.delivery-nav__item:nth-child(8) {
+  display: none;
+}
+
+
+
 
 
 
@@ -1300,8 +1431,10 @@
   }
 
   .delivery-catalog {
+    margin: 0 auto;
     margin-top: 20px;
-    justify-content: center;
+    justify-content: flex-start;
+    width: auto;
   }
 
   .delivery-nav__item {
@@ -1316,7 +1449,9 @@
   }
 
   .delivery-card {
-    margin: 0 10px 35px 10px;
+    margin: 0 5px 35px 5px;
+    width: 235px;
+    height: 371px;
   }
 
   .delivery-nav__link--active:before, .delivery-nav__link:before {
@@ -1530,7 +1665,7 @@
 
     .contacts-maps__img {
       max-width: 1000px;
-      height: 100%;
+      height: 450px;
       width: 100%;
       object-fit: cover;
     }
@@ -1829,6 +1964,9 @@
   .wrust-modal__bottom {
     width: 100%;
     flex-wrap: wrap;
+    .block-count {
+      flex-grow: .3;
+    }
   }
 
   .wrust-modal__btn {
@@ -1900,7 +2038,7 @@
 
   .lk-box__left {
     width: auto;
-    padding: 60px 0 45px;
+    padding: 110px 0 45px;
   }
 
 
@@ -2048,7 +2186,7 @@
 }
 
 .hamburger-lk {
-  top: 25px;
+  top: 55px;
   width: 30px;
   left: 15px;
   z-index: 1000;
@@ -2077,7 +2215,42 @@
 }
 
 
+.second-slider {
+  .delivery-slider-right {
+    right: 15px;
+    background: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(4px);
+    border: none;
+    width: 37px;
+    height: 37px;
+  }
+  .delivery-slider-left {
+   z-index: -100;
+   background-image: none;
+   background-color: transparent;
+   border: none;
+   font-size: 0;
+  }
+}
 
+.contacts-dropdown__title {
+  font-size: 30px;
+}
+
+.contacts {
+  flex-direction: column;
+}
+
+.contacts__item {
+  width: 100%;
+}
+
+.delivery-nav__item:nth-child(6),
+.delivery-nav__item:nth-child(7),
+.delivery-nav__item:nth-child(8),
+.delivery-nav__item:nth-child(9), {
+  display: none;
+}
 
 
 
@@ -3060,7 +3233,7 @@
 
   .lk-box__left {
     width: auto;
-    padding: 60px 0 45px;
+    padding: 120px 0 45px;
   }
 
 
@@ -3333,7 +3506,7 @@
 }
 
 .hamburger-lk {
-  top: 25px;
+  top: 54px;
   width: 30px;
   left: 15px;
   z-index: 1000;
@@ -3998,6 +4171,7 @@
       align-items: center;
       &:last-child {
         .feedback__title {
+          margin-top: 30px;
           font-size: 22px;
         line-height: 25px;
         }
@@ -4056,13 +4230,13 @@
   }
 
   .checkout-row__coll:first-child {
-    width: 250px;
+    width: 262px;
     order: -1;
     margin-bottom: 25px;
   }
 
   .checkout-row__image {
-    margin-right: 10px;
+    margin-right: 9%;
   }
 
   .checkout-row__title {
@@ -4088,7 +4262,7 @@
 
   .checkout-menu {
     background-image: none;
-    background-color: #000;
+    background-color: #141414;
   }
 
   .checkout-widget {
@@ -4273,7 +4447,7 @@
 
 .modal--wrust {
   width: 100%;
-  height: 100%;
+  height: 95%;
   padding: 20px 10px 10px;
   overflow-y: scroll;
 }
@@ -4627,6 +4801,7 @@ p.login-bottom__back {
 
 .more-mobile {
   margin-top: -30px;
+  margin-bottom: 15px;
 }
 
 
